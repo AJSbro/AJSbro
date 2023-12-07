@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto:wght@300;400&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+	/*font-family: 'poppins', sans-serif;*/
+	
+}
+.navBar{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 5%;
+	background: pink;
+	width: 100%;
+}
+.navBar ul{
+	display: flex;
+	list-style: none;
+}
+.navBar ul li{
+	padding: 0 20px;
+}
+.navBar ul li a{
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+}
+.navBar ul li a:hover{
+	border-bottom: 2px solid darkgreen;
+	color: grey;
+}
+.logo{
+	font-size: 30px;
+	color: white;
+}
+.loginBtn0{
+	padding: 10px 30px;
+	background: lightpink;
+	font-size: 20px;
+	display: none;
+}
+.loginBtn{
+	padding: 10px 30px;
+	background: white;
+	font-size: 20px;
+	border-radius: 5px;
+	color: pink;
+}
+.loginBtn:hover{
+	background-color: lightpink;
+	color: white;
+}
+.openMenu{
+	display: none;
+}
+
+@media(max-width: 800px){
+	.navBar ul{
+		position: absolute;
+		top: 70px;
+		flex-direction: column;
+		background: pink;
+		width: 100%;
+		left: -100%;
+		padding: 50px 20px;
+		justify-content: center;
+		align-items: center;
+		transition: 0.4s;
+		z-index: 1;
+	}
+	.navBar ul.open{
+		left: 0;
+		transition: 0.4s;
+	}
+	.navBar ul li{
+		padding: 10px 0;
+	}
+	.loginBtn0{
+		display: block;
+		background-color: white;
+		color: lightpink;
+		border-radius: 5px;
+		transition: 0.3s;
+	}
+	.loginBtn0:hover{
+		background-color: lightpink;
+		color: white;
+		transition: 0.3s;
+	}
+	.loginBtn{
+		display: none;
+	}
+	.openMenu{
+		display: block;
+	}
+}
+
+/* Formulario*/
+
+.section1{
+	width: 300px;
+	height: 440px;
+	background: pink;
+	border-radius: 10px;
+	margin: 5% auto;
+	opacity: 0;
+	z-index: 2;
+}
+.list{
+	display: flex;
+	flex-direction: column;
+	padding: 15px;
+}
+.list input{
+	margin: 10px 0;
+	background: none;
+	border: none;
+	border-bottom: 1px solid gray;
+	outline: none;
+}
+.loginForm{
+		padding: 8px;
+		font-size: 16px;
+		background: white;
+		width: 95%;
+		text-align: center;
+		border-radius: 5px;
+		text-decoration: none;
+		color: black;
+		transition: 0.3s;
+	}
+	.loginForm:hover{
+		background: lightpink;
+		color: white;
+		transition: 0.3s;
+	}
+#close{
+	position: relative;
+	margin-left: 75%;
+}
+.list p{
+	font-size: 13px;
+}
+.list p a{
+	color: black;
+	text-decoration: none;
+}
+.list p a:hover{
+	color: grey;
+	border-bottom: 1px solid grey;
+}
+#radio{
+	display: flex;
+	font-size: 13px;
+	flex-direction: row;
+	align-items: center;
+	padding: 0 20px;
+}
+#radio label{
+	margin-left: 10px;
+}
+#cadastro{
+	text-align: center;
+}
+@media(max-width: 500px){
+	.section1{
+		width: 250px;
+		height: 380px;
+	}
+	.list{
+		padding: 10px;
+	}
+	#listLoginForm{
+		align-items: center;
+	}
+	.loginForm{
+		padding: 5px;
+		font-size: 14px;
+		background: white;
+		width: 95%;
+		text-align: center;
+		border-radius: 5px;
+		text-decoration: none;
+		color: black;
+		transition: 0.2s;
+	}
+	.loginForm:hover{
+		background: lightpink;
+		color: white;
+		transition: 0.2s;
+	}
+	#cadastro{
+		font-size: 19px;
+	}
+	.list p{
+		font-size: 11px;
+	}
+}
+
+/* Footer*/
+
+
+.subFooter{
+	display: flex;
+	padding: 30px;
+	background: pink;
+	justify-content: space-around;
+	color: black;
+}
+.listFoot h3{
+	margin-bottom: 30px;
+	color: white;
+}
+.listFoot ul{
+	list-style: none;
+}
+.listFoot ul li{
+	padding: 5px 0;
+}
+.listFoot ul li a{
+	text-decoration: none;
+	color: black;
+}
+.listFoot ul li a:hover{
+	color: grey;
+}
+.copyright{
+	width: 100%;
+	color: black;
+	background: lightpink;
+	font-size: 12px;
+	text-align: center;
+	padding: 10px;
+}
+@media(max-width: 850px){
+	.subFooter{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.listFoot{
+		padding: 5px 40px;
+	}
+}
+@media(max-width: 650px){
+	.subFooter{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.listFoot{
+		padding: 5px 40px;
+	}
+}
+@media(max-width: 500px){
+	.subFooter{
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.listFoot{
+		padding: 5px 0;
+	}
+	.listFoot h3{
+		margin-top: 20px;
+		color: white;
+	}
+	.copyright{
+		font-size: 10px;
+	}
+	.listFoot ul li{
+		font-size: 15px;
+	}
+	.listFoot ul li a{
+		text-decoration: none;
+		color: black;
+	}
+}
